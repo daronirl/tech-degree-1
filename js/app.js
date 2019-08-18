@@ -1,41 +1,41 @@
 
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
 
+// Created a function to grab a random quote from the "quotes" array.
 
-
-function getRandomQuote(array) {
-     var randomQu = Math.floor(Math.random() * quotes.length);
-    return array;
+function getRandomQuote() {
+     var randomNumber = Math.floor(Math.random() * quotes.length);
+     return quotes[randomNumber];
 }
+console.log(getRandomQuote());
 
-alert();
 
 
-/***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
-
-var HTML = '';
-
+// Created a printQuote function to display quotes on screen.
 
 function printQuote() {
-    
-   
+  var quotes = getRandomQuote();
+  var HTML = '';
+  HTML += '<p class="quote">' + quotes.quote + '</p>';
+  HTML += '<p class="source">' + quotes.source + '<span class="citation">' + quotes.citation + '</span>' + '<span class="year">' + quotes.year + '</span>' + '</p>';
+
+
+  if (quotes.citation === true) {
+    '<span class="citation">' + '</span>';
+
+  } 
+
+  if (quotes.year === true) {
+    '<span class="year">' + '</span>';
+
+  }
+
+  var div = document.getElementById('quote-box');
+  div.innerHTML = HTML;
 
 }
+
+
+
 
 
 
