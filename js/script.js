@@ -25,7 +25,7 @@ var quotes = [
     {
       quote: "All we have to decide is what to do with the time that is given us.",
       source: '-Gandalf The Grey',
-      citation: 'The lord of the rings - The fellowship of the ring'
+      citation: 'The Lord of the Rings - The Fellowship of the Ring'
     },
 
     {
